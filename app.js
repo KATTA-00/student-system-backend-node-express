@@ -8,6 +8,7 @@ require("dotenv").config();
 
 const connectDB = require("./config/connectDB");
 const register = require("./routes/registration");
+const students = require("./routes/students");
 
 connectDB();
 
@@ -19,6 +20,7 @@ app.use(express.urlencoded({ extended: false }));
 app.use(express.json());
 
 app.use("/register", register);
+app.use("/students", students);
 
 mongoose.connection.once("open", () => {
   console.log("Connected to MongoDB");

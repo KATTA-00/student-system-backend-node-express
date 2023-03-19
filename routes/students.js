@@ -2,11 +2,8 @@ const express = require("express");
 const router = express.Router();
 const Student = require("../model/Student");
 
-router.post("/", async (req, res) => {
-  const temp = { ...req.body };
-
-  const result = await Student.create(temp);
-
+router.get("/", async (req, res) => {
+  const result = await Student.find();
   res.status(200).json(result);
 });
 
