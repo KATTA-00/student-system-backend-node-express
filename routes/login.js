@@ -20,7 +20,7 @@ router.post("/", async (req, res) => {
     const refreshToken = jwt.sign(
       { name: foundUser.firstname + " " + foundUser.lastname },
       "secretecode",
-      { expiresIn: "3600s" }
+      { expiresIn: "900s" }
     );
     // Saving refreshToken with current user
     foundUser.refreshToken = refreshToken;
