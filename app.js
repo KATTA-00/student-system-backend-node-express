@@ -28,3 +28,5 @@ mongoose.connection.once("open", () => {
   console.log("Connected to MongoDB");
   app.listen(PORT, () => console.log(`Server running on port ${PORT}`));
 });
+
+// DATABASE_URL = mongodb+srv://katta123:katta123@cluster0.qxwpxve.mongodb.net/StudetnDetailsDB?retryWrites=true&w=majority
